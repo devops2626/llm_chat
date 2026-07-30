@@ -1,3 +1,11 @@
-openai>=1.0.0
+# iSH / 32-bit Alpine (musl) friendly pins
+# Modern openai (>=1.0) requires pydantic-core + jiter (Rust) — no i686 wheels
+openai==0.28.1
+tqdm>=4.66.0
+
 google-search-results>=2.4.2
-trafilatura>=1.6.0
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+
+# Optional pure-Python helpers (install with care on iSH)
+# aiohttp==3.8.6  # only if needed; use AIOHTTP_NO_EXTENSIONS=1
